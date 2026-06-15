@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: panpukha_java_final_hw
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5440/university_sms}
+    username: ${DB_USER:university}
+    password: ${DB_PASSWORD:university}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+
+server:
+  port: 8080
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
